@@ -1,0 +1,16 @@
+<?php
+function tld_language_switch_language_negotiation_info() {
+  return array(
+    'site_version' => array(
+      'callbacks' => array(
+        'language' => 'tld_language_switch_language_from_tld',
+      ),
+      'weight' => -10,
+      'name' => t('TLD'),
+      // NOTE: The callback cannot be in this file, unless you specifically include it.
+      // Language detection runs before Drupal Bootstrap completes.
+      'file' => drupal_get_path('module', 'tld_language_switch') . '/tld_language_switch.inc',
+      'description' => t('Determine the language from the Top Level Domain (TLD).'),
+    ),
+  );
+}

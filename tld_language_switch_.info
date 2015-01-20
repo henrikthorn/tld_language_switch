@@ -1,0 +1,5 @@
+name = TLD Language Switch
+description = Language detection by TLD
+package = Multilingual
+core = 7.x
+
